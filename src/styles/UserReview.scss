@@ -1,7 +1,9 @@
 $border-radius-top: 20px;
 $border-radius-bottom: 50px;
+
 $grad-a: linear-gradient(90deg, #0F18ED 0%, #E70FEB 100%);
 $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 255, 0.80) 29.48%, rgba(212, 203, 255, 0.78) 55.52%, rgba(250, 160, 246, 0.80) 82.08%, rgba(208, 172, 254, 0.80) 98.23%);
+
 
 .container {
   --border-width: 10px;
@@ -14,23 +16,24 @@ $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 25
   align-items: center;
   gap: 15px;
 
-  .user-text {
+  .testimoni-text {
     position: relative;
     border-radius: $border-radius-top $border-radius-bottom;
     background: $grad-c;
     padding: 20px;
-    width: 100%;
+    width: 70%;
     text-align: center;
     z-index: 1;
     .author {
       display: block;
       text-align: center;
       font-weight: 600;
+      margin-top: 15px;
     }
   }
 }
 
-.user-text::before{
+.testimoni-text::before{
   content: "";
   display: block;
   height: calc(100% - calc(var(--border-width) * 2));
@@ -43,11 +46,16 @@ $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 25
   z-index: -1;
 }
 
+.testimoni-text {
+  // background-color: black;
+}
+
 .testimonial-user {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 45px;
+  // background-color: aqua;
 }
 
 .user-container {
@@ -65,12 +73,14 @@ $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 25
   background: $grad-c;
   z-index: 1;
   
-  // .img-fluid {
-  //   object-fit: cover;
-  //   width: 165px;
-  //   height: 150px;
-  //   border-radius: 70px 20px 0px 0px;
-  // }
+  .author-pic {
+    height: 175px;
+    border-radius: 80px 20px 0px 0px;
+    position: relative;
+    display: inline-block;
+    // overflow: hidden;
+    // object-fit: cover;
+  }
 
   .author-name {
     font-size: 14px;
@@ -86,9 +96,11 @@ $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 25
 
 .user-container img {
   width: 165px;
-  height: 150px;
+  // height: 150px;
   object-fit: cover;
-  border-radius: 70px 20px 0px 0px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
 
@@ -105,15 +117,13 @@ $grad-c: linear-gradient(180deg, rgba(190, 212, 255, 0.80) 0%, rgba(246, 190, 25
   z-index: -1;
 }
 
-.gambar {
-  width: 50%;
-}
 
 .icon-arrow {
   height: 80px;
-  width: 100%;
+  width: 80px;
 }
 
 #arrow-left {
   transform: scaleX(-1);
 }
+
